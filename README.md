@@ -1,2 +1,3 @@
-# android_kernel_nothing_sm8475
-Dry Blood kernel for Nothing Phone (2)
+# Dry Blood kernel for Nothing Phone (2)
+# Releases Changelog
+- Version 1.0.0: (Build not ready)
