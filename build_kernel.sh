@@ -19,7 +19,7 @@ if [[ "${1}" == "skip" ]] ; then
 else
 	echo "Compiling kernel"
 	cp defconfig .config
-	make "$@" || exit 1
+	make "$@" -j12 || exit 1
 fi
 
 echo "Building new ramdisk"
@@ -46,7 +46,7 @@ ls -lh $RAMFS_TMP.cpio.lz4
 cd $KERNELDIR
 
 echo "Making new boot image"
-mkbootimg.py \
+./mkbootimg.py \
     --kernel $KERNELDIR/arch/arm64/boot/Image.gz \
     --ramdisk $RAMFS_TMP.cpio.lz4 \
     --pagesize 4096 \
