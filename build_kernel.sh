@@ -46,7 +46,7 @@ ls -lh $RAMFS_TMP.cpio.lz4
 cd $KERNELDIR
 
 echo "Making new boot image"
-mkbootimg.py \
+./mkbootimg.py \
     --kernel $KERNELDIR/arch/arm64/boot/Image.gz \
     --ramdisk $RAMFS_TMP.cpio.lz4 \
     --pagesize 4096 \
